@@ -1,6 +1,6 @@
 services:
   app:
-    image: k8s-ramadan:latest
+    image: k8s-ramadan:v1
     build:
       context: .
       dockerfile: Dockerfile
