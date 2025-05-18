@@ -1,10 +1,10 @@
 services:
   app:
-    image: ci-ramadan:latest
+    image: k8s-ramadan:latest
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ci-ramadan-v1
+    container_name: k8s-ramadan-v1
     restart: unless-stopped
     ports:
       - "9001:9000"
@@ -14,11 +14,11 @@ services:
       - ./:/var/www/html
     entrypoint: ["/var/www/html/docker-app-entrypoint.sh"]
     networks:
-      - ci-ramadan-network
+      - k8s-ramadan-network
   
   nginx:
     image: nginx:stable-alpine
-    container_name: ci-ramadan-nginx-v1
+    container_name: k8s-ramadan-nginx-v1
     restart: unless-stopped
     ports:
       - "8091:80"
@@ -30,9 +30,9 @@ services:
       - app
     entrypoint: ["/var/www/html/docker-nginx-entrypoint.sh"]
     networks:
-      - ci-ramadan-network
+      - k8s-ramadan-network
 
 
 networks:
-  ci-ramadan-network:
+  k8s-ramadan-network:
     driver: bridge
