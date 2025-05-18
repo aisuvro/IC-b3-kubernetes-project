@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
         - name: laravel-app
-          image: k8s-ramadan:latest
+          image: aisuvro/k8s-ramadan:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9000

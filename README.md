@@ -43,28 +43,23 @@ This Laravel-based web application demonstrates modern continuous integration (C
    kubectl get pods -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --watch
    ```
 
-2. **Build and Load Docker Image (if not using a registry):**
-   ```sh
-   docker build -t k8s-ramadan:v1 .
-   ```
-
-3. **Deploy Application:**
+2. **Deploy Application:**
    ```sh
    kubectl apply -f k8s/deploy.yaml
    ```
 
-4. **Verify Deployment:**
+3. **Verify Deployment:**
    ```sh
    kubectl get all -n ns
    kubectl get ingress -n ns
    ```
 
-5. **Update `/etc/hosts`:**
+4. **Update `/etc/hosts`:**
    ```
    127.0.0.1 my-app.local
    ```
 
-6. **Access Application:**
+5. **Access Application:**
    ```
    http://my-app.local
    ```
