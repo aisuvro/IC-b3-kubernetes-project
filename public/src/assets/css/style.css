@@ -1,0 +1,348 @@
+/* 
+    Template Name: EidHoly
+    Template URI: https://eidholy.netlify.app/
+    Author: Alissio
+    File Description: Main Css file of the template
+	Version: 1.0.0
+*/
+
+
+/*-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. - GENERAL
+
+    2. - CUSTOMIZE THE CAROUSEL
+
+    3. - FADE EFFECTS
+    
+    4. - RESPONSIVE
+
+-----------------------------------------------------------------------------------*/
+
+
+
+/* 1. - GENERAL
+-------------------------------------------------- */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #124d38;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+
+/* 2. - CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    min-height: 100vh;
+}
+/* Carousel control position */
+.carousel-control-next,
+.carousel-control-prev {
+    top: auto;
+    bottom: 2rem;
+    width: auto;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: .5rem;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    background-color: #000;
+}
+.carousel-control-prev {
+    left: auto;
+    right: 5.5rem;
+}
+.carousel-control-next {
+    right: 2rem;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    padding: 0;
+    bottom: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10;
+    position: relative;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+}
+/* Declare heights because of positioning of img element */
+.carousel-inner {
+    overflow-y: auto;
+}
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+/* Carousel custom class */
+.carousel-caption > .row {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.carousel-caption > .row > div {
+    height: 100%;
+}
+.carousel-media {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel-media::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../img/mask.png') no-repeat center center / cover;
+}
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.carousel-bg-img {
+    height: 130%;
+    width: 130%;
+    min-width: 130%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.carousel-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.carousel-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+}
+.carousel-desc-ttl {
+    font-size: 3.2rem;
+    line-height: normal;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.carousel-desc-txt {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #f9d84b;
+    margin-bottom: 0;
+}
+.carousel-obj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-column-gap: .75rem;
+       -moz-column-gap: .75rem;
+            column-gap: .75rem;
+}
+.obj-1 {
+    width: 3rem;
+}
+.obj-2 {
+    width: 2rem;
+}
+.carousel-dets_left {
+    width: 100%;
+    background-color: #ffeabf;
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+    overflow: hidden;
+    -webkit-column-gap: .5rem;
+       -moz-column-gap: .5rem;
+            column-gap: .5rem;
+    margin-bottom: 1rem;
+}
+.carousel-dets_right {
+    width: 100%;
+    background-color: #36219e;
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.carousel-dets_ttl {
+    font-weight: 600;
+    display: inline-block;
+}
+.carousel-dets_time {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.carousel-dets_left .carousel-dets_ttl {
+    color: #000;
+}
+.carousel-dets_left .carousel-dets_time {
+    color: #dfbf33;
+}
+.carousel-dets_right .carousel-dets_ttl {
+    color: #e3deff;
+}
+.carousel-dets_right .carousel-dets_time {
+    color: #dfbf33;
+}
+.carousel-indicators {
+    margin-bottom: 1.5rem;
+}
+.carousel-indicators [data-bs-target] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #ffdc73;
+}
+
+
+
+/* 3. - FADE EFFECTS
+-------------------------------------------------- */
+.fade {
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: opacity, transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+         -o-transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+            transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+}
+.fade-1500 {
+    -webkit-transition-duration: 1.5s;
+         -o-transition-duration: 1.5s;
+            transition-duration: 1.5s
+}
+.fade-left {
+    -webkit-transform: translate3d(100px,0,0);
+            transform: translate3d(100px,0,0);
+}
+.fade-1500.fade-left {
+    -webkit-transform: translate3d(150px,0,0);
+            transform: translate3d(150px,0,0);
+}
+.fade-down {
+    -webkit-transform: translate3d(0,-100px,0);
+            transform: translate3d(0,-100px,0);
+}
+.fade-1500.fade-down {
+    -webkit-transform: translate3d(0,-80px,0);
+            transform: translate3d(0,-80px,0);
+}
+.fade-up {
+    -webkit-transform: translate3d(0,60px,0);
+            transform: translate3d(0,60px,0);
+}
+.fade-1500.fade-up {
+    -webkit-transform: translate3d(0,80px,0);
+            transform: translate3d(0,80px,0);
+}
+.fade-down-left {
+    -webkit-transform: translate3d(100px,-100px,0);
+            transform: translate3d(100px,-100px,0);
+}
+.active .fade {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+
+
+/* 4. - RESPONSIVE
+-------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+    .carousel-desc-ttl {
+        font-size: 2.25rem;
+    }
+    .carousel-desc-txt {
+        font-size: 1.2rem;
+    }
+    .carousel-img {
+        width: 140%;
+    }
+    .carousel-caption > .row > div {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .carousel-indicators {
+        position: relative;
+        margin-top: 2rem;
+    }
+    .carousel-desc-ttl {
+        font-size: 2.5rem;
+    }
+    .carousel-desc-txt {
+        font-size: 1.1rem;
+    }
+    .carousel-dets > .row > div {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 50%;
+    }
+    .carousel-img {
+        width: 100%;
+    }
+    .carousel-caption > .row > div {
+        overflow: unset;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .carousel-dets > .row > div {
+        width: 100%;
+    }
+}
